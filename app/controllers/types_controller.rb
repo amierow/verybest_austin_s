@@ -6,6 +6,7 @@ class TypesController < ApplicationController
   end
 
   def show
+    @dish = Dish.new
     @type = Type.find(params[:id])
 
     render("types/show.html.erb")

@@ -30,7 +30,13 @@
         <td><%= venue.name %></td>
         <td><%= venue.address %></td>
         <td><%= venue.neighborhood %></td>
-        <td><%= venue.user.email %></td>
+        <td>
+          <% if venue.user.present? %>
+            <a href="/users/<%= venue.user.id %>">
+              <%= venue.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/venues/<%= venue.id %>" class="btn btn-primary">Show</a>
           

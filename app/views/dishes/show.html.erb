@@ -9,7 +9,13 @@
       <dd><%= @dish.name %></dd>
 
       <dt>Type</dt>
-      <dd><%= @dish.type_id %></dd>
+      <dd>
+        <% if @dish.type.present? %>
+          <a href="/types/<%= @dish.type_id %>">
+            <%= @dish.type.name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

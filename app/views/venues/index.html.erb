@@ -21,7 +21,7 @@
         <td><%= venue.name %></td>
         <td><%= venue.address %></td>
         <td><%= venue.neighborhood %></td>
-        <td><%= venue.user_id %></td>
+        <td><%= venue.user.email %></td>
         <td>
           <a href="/venues/<%= venue.id %>" class="btn btn-primary">Show</a>
           <a href="/venues/<%= venue.id %>/edit" class="btn btn-warning">Edit</a>
